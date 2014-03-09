@@ -252,6 +252,7 @@ def catch(port=8888, timeout_sec=None):
         # dump request
         request_json=json.dumps(request)
         print request_json
+        sys.stdout.flush()
         # reply
         if request['method'].upper() in ['GET', 'POST']:
             hdo.reply(status=200, 

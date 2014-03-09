@@ -1,10 +1,13 @@
 
 all:
 
+clean:
+	rm -fr *.egg-info dist build
+
 h:
 	./httpdo.py hello
 c:
-	./httpdo.py catch 8888 5
+	./httpdo.py catch 8888 5 | jq -M .
 
 e:
 	./httpdo.py export
