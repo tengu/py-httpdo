@@ -248,7 +248,7 @@ def catch(port=8888, timeout_sec=None):
     
     hdo=HttpDo(int(port))
     while True:
-        request=hdo.catch(timeout_sec=float(timeout_sec))
+        request=hdo.catch(timeout_sec=timeout_sec)
         # dump request
         request_json=json.dumps(request)
         print request_json
