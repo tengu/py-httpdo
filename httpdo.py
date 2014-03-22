@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+* todo
+  * add proxy
+"""
 import sys,os
 import json
 import urlparse
@@ -21,6 +25,7 @@ def request_val(r):
         headers=dict(r.headers),
         query=dict(urlparse.parse_qsl(r.query)),
         path=up.path,
+        body=r.body,
         )
 
 class HelloHandler(tornado.web.RequestHandler):
