@@ -5,7 +5,7 @@ setup(
     py_modules = ["httpdo"],
     scripts = ["httpdo.py"],
     zip_safe=False,
-    version = "0.2",
+    version = "0.3",
     license = "LGPL",
     install_requires=["tornado", "baker"],
     description = "a scriptable httpd",
